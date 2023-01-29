@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+
+        <Preference
+            app:key="@string/SendFeedback"
+            app:title="@string/SendFeedback"
+            app:summary="@string/SendFeedback"
+            app:icon="@drawable/comment">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:targetPackage="com.child.parent.kidcare"
+                android:data="@string/SendFeedback"
+                android:targetClass="com.child.parent.kidcare.views.sendfeedback.SendFeedbackActivity" />  </Preference>
+
+
+
+            <Preference
+                app:key="passcode"
+                app:title="Pass-Code"
+                app:summary="Generate passcode to unlock an app"
+                app:allowDividerAbove="true"
+                app:icon="@drawable/info"
+                app:allowDividerBelow="true">
+                <intent
+                    android:action="android.intent.action.VIEW"
+                    android:targetPackage="com.child.parent.kidcare"
+                    android:targetClass="com.child.parent.kidcare.views.passcode.PassCodeActivity" />  </Preference>
+    <Preference
+        app:key="@string/About"
+        app:title="@string/About"
+        app:summary="@string/About"
+        app:allowDividerAbove="true"
+        app:icon="@drawable/info"
+        app:allowDividerBelow="true">
+    <intent
+        android:action="android.intent.action.VIEW"
+        android:targetPackage="com.child.parent.kidcare"
+        android:data="@string/About"
+        android:targetClass="com.child.parent.kidcare.views.sendfeedback.SendFeedbackActivity" />  </Preference>
+
+
+
+
+</PreferenceScreen>

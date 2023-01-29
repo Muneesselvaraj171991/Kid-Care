@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cardviewFlip"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="10dp">
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="108dp"
+      android:layout_margin="8dp"
+      android:orientation="vertical"
+      android:layout_gravity="center"
+      android:background="@color/white"
+      android:gravity="center">
+
+    <TextView
+        android:id="@+id/applist_lblappname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp" />
+
+    <TextView
+        android:id="@+id/applist_lblstatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="7dp"
+        android:text=""/>
+
+
+  </LinearLayout>
+  <TextView
+      android:id="@+id/tvflip_info"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_gravity="bottom"
+      android:background="@drawable/shape_right"
+      android:drawableStart="@drawable/ic_flip"
+      android:paddingLeft="5dp"
+      android:paddingTop="10dp"
+      android:paddingRight="10dp"
+      android:paddingBottom="5dp" />
+</androidx.cardview.widget.CardView>

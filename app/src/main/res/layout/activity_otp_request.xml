@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@drawable/login_shape_bk"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="25dp"
+                android:layout_marginTop="100dp"
+                android:src="@drawable/ic_logo" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:gravity="center_horizontal"
+                android:paddingLeft="40dp"
+                android:paddingRight="40dp"
+                android:text="NEED AN ACCESS TO UNLOCK!"
+                android:textColor="@android:color/white"
+                android:textSize="18sp" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="25dp"
+                android:gravity="center_horizontal"
+                android:paddingLeft="40dp"
+                android:paddingRight="40dp"
+                android:text="Need passcode from your parents!"
+                android:textColor="@android:color/white"
+                android:textSize="14dp" />
+            <com.child.parent.kidcare.customview.OtpEditText
+                android:id="@+id/et_otp"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:cursorVisible="true"
+                android:textAllCaps="true"
+                android:inputType="text"
+                android:maxLength="4"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textColorLink="@color/white"
+                android:textIsSelectable="false"
+                android:textSize="20sp"/>
+
+            <Button
+                android:id="@+id/btn_verify_otp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="25dp"
+                android:background="@null"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:text="Verify Otp"
+                android:textColor="@android:color/white"
+                android:textSize="14dp" />
+
+        </LinearLayout>
+
+</RelativeLayout>

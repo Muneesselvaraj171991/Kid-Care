@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:android="http://schemas.android.com/apk/res/android"
+    android:ordering="sequentially">
+
+    <!--Set Alpha 0-->
+    <objectAnimator
+        android:duration="0"
+        android:propertyName="alpha"
+        android:valueFrom="1.0"
+        android:valueTo="0.0" />
+
+    <set android:ordering="together">
+        <!--Scale Down Anim-->
+        <objectAnimator
+            android:duration="@integer/flip_rotate_animation_duration_half"
+            android:propertyName="scaleX"
+            android:valueFrom="1.0"
+            android:valueTo="@integer/flip_scale_down_limit" />
+        <objectAnimator
+            android:duration="@integer/flip_rotate_animation_duration_half"
+            android:propertyName="scaleY"
+            android:valueFrom="1.0"
+            android:valueTo="@integer/flip_scale_down_limit" />
+    </set>
+
+    <set android:ordering="together">
+
+        <!--Rotation Anim-->
+        <objectAnimator
+            android:duration="@integer/flip_rotate_animation_duration"
+            android:propertyName="rotationY"
+            android:repeatMode="reverse"
+            android:valueFrom="-180"
+            android:valueTo="0" />
+
+
+        <!--Set Alpha 1 on half enter-->
+        <objectAnimator
+            android:duration="0"
+            android:propertyName="alpha"
+            android:startOffset="@integer/flip_rotate_animation_duration_half"
+            android:valueFrom="0.0"
+            android:valueTo="1.0" />
+
+    </set>
+
+    <set android:ordering="together">
+        <!--Scale Up Anim-->
+        <objectAnimator
+            android:duration="@integer/flip_rotate_animation_duration_half"
+            android:propertyName="scaleX"
+            android:valueFrom="@integer/flip_scale_down_limit"
+            android:valueTo="1" />
+        <objectAnimator
+            android:duration="@integer/flip_rotate_animation_duration_half"
+            android:propertyName="scaleY"
+            android:valueFrom="@integer/flip_scale_down_limit"
+            android:valueTo="1" />
+    </set>
+</set>

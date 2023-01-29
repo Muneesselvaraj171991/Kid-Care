@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="easy_flip_view">
+        <attr name="flipOnTouch" format="boolean"/>
+        <attr name="flipDuration" format="integer"/>
+        <attr name="flipType" format="string"/>
+        <attr name="flipFrom" format="string"/>
+        <attr name="flipEnabled" format="boolean"/>
+        <attr name="flipOnceEnabled" format="boolean"/>
+        <attr name="autoFlipBack" format="boolean"/>
+        <attr name="autoFlipBackTime" format="integer"/>
+        <attr name="animFlipInId" format="reference"/>
+        <attr name="animFlipOutId" format="reference"/>
+
+    </declare-styleable>
+    <declare-styleable name="SleepTimePicker">
+
+        <attr name="progressColor" format="color" />
+        <attr name="progressBackgroundColor" format="color" />
+        <attr name="divisionColor" format="color" />
+        <attr name="progressStrokeWidth" format="dimension" />
+        <attr name="progressBgStrokeWidth" format="dimension" />
+        <attr name="strokeBottomShadowRadius" format="dimension" />
+        <attr name="strokeTopShadowRadius" format="dimension" />
+        <attr name="strokeBottomShadowColor" format="color" />
+        <attr name="strokeTopShadowColor" format="color" />
+        <attr name="labelColor" format="color" />
+        <attr name="labelFont" format="reference" />
+        <attr name="sleepLayoutId" format="reference" />
+        <attr name="wakeLayoutId" format="reference" />
+
+    </declare-styleable>
+    <declare-styleable name="WeekdaysPicker">
+        <attr name="enabled" format="boolean" />
+        <attr name="highlight_color" format="color" />
+        <attr name="background_color" format="color" />
+        <attr name="text_color" format="color" />
+        <attr name="text_unselected_color" format="color" />
+        <attr name="sunday_first_day" format="boolean" />
+        <attr name="show_weekend" format="boolean" />
+        <attr name="weekenddarker" format="boolean" />
+        <attr name="weekend_color" format="color" />
+        <attr name="weekend_text_color" format="color" />
+        <attr name="full_size" format="boolean" />
+        <attr name="recurrence" format="boolean" />
+        <attr name="border_color" format="color" />
+        <attr name="border_thickness" format="integer" />
+        <attr name="border_highlight_color" format="color" />
+        <attr name="border_highlight_thickness" format="integer" />
+    </declare-styleable>
+
+</resources>

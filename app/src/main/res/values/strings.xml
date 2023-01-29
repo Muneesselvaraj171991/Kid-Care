@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">Kid-Care</string>
+
+    <string name="UserProfile">User Profile</string>
+    <string name="UserName">User Name</string>
+    <string name="DOB">Date Of Birth</string>
+    <string name="Email">Email</string>
+    <string name="ParentMobileNumber">Parent Mobile Number</string>
+    <string name="ChildMobileNumber">Child Mobile Number</string>
+    <string name="Register">Register</string>
+    <string name="SelectApp">Select App</string>
+    <string name="SetTime">Set Time</string>
+    <string name="Settings">Settings</string>
+
+    <string name="lock_time_start">START AT</string>
+
+    <string name="schedule_hr">HR</string>
+    <string name="schedule_min">MIN</string>
+    <string name="lock_time_end">END AT</string>
+    <string name="SendFeedback">Send Feedback</string>
+    <string name="About">About</string>
+    <string name="Title">Title</string>
+    <string name="Description">Description</string>
+    <string name="app_usage"><![CDATA[Kid-Care app needs App usage to monitor other apps. Press okay to proceed!]]></string>
+    <string name="app_overlay">Kid-Care needs overlay permission to show lock screen!.</string>
+    <string name="care_time_settimer">Care timer is ON!, Changes are not welcome</string>
+    <string name="care_time_applist">Care timer is ON!. Changes will be taken care in the next schedule</string>
+    <string name="SetTimer">Set Timer</string>
+    <string name="IsparentMobile">Is Parent Mobile?</string>
+</resources>
