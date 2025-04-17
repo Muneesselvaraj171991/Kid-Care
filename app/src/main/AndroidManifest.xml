@@ -33,6 +33,7 @@
 
             android:name=".views.splash.SplashScreenActivity"
             android:screenOrientation="portrait"
+            android:exported="true"
             android:configChanges="orientation|keyboardHidden"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>

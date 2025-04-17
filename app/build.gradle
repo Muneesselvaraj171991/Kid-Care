@@ -1,18 +1,20 @@
-apply plugin: 'com.android.application'
-
+plugins {
+    id 'com.android.application'
+}
 android {
-    compileSdkVersion 29
-    buildToolsVersion "29.0.3"
+    compileSdk 32
 
     defaultConfig {
-        applicationId "com.child.parent.kidcare"
-        minSdkVersion 21
-        targetSdkVersion 29
+        applicationId "com.volvocars.climate"
+        minSdk 32
+        targetSdk 32
         versionCode 1
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
+
+
 
     buildTypes {
         release {
@@ -21,11 +23,20 @@ android {
         }
     }
     compileOptions {
-        // Flag to enable support for the new language APIs
-        coreLibraryDesugaringEnabled true
-        // Sets Java compatibility to Java 8
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+
+    lintOptions {
+        abortOnError false
+    }
+    packagingOptions {
+        pickFirst 'protobuf.meta'
+        pickFirst 'META-INF/main.kotlin_module'
+    }
+
+    task wrapper(type: Wrapper){
+        gradleVersion = '4.6'
     }
 }
 
@@ -44,7 +55,7 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
-    implementation 'androidx.work:work-runtime:2.7.0-alpha01'
+    implementation 'androidx.work:work-runtime:2.7.0-alpha05'
     implementation 'android.arch.persistence.room:runtime:1.1.1'
     annotationProcessor 'android.arch.persistence.room:compiler:1.1.1'
     implementation 'androidx.recyclerview:recyclerview:1.1.0'
@@ -54,7 +65,5 @@ dependencies {
     implementation 'androidx.preference:preference:1.1.0-alpha05'
     implementation 'com.ogaclejapan.smarttablayout:library:1.2.1@aar'
     implementation 'com.google.code.gson:gson:2.8.6'
-
-
 
 }
