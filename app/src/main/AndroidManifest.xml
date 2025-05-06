@@ -20,7 +20,7 @@
         android:allowBackup="false"
 
         android:icon="@mipmap/ic_launcher"
-        android:label="child"
+        android:label="@string/app_name"
 
         android:manageSpaceActivity=".views.UserProfile.UserProfileActivity"
         android:requestLegacyExternalStorage="true"
