@@ -16,11 +16,12 @@
 
 package com.child.parent.kidcare.alarms;
 
+import static android.app.PendingIntent.FLAG_IMMUTABLE;
+
 import android.app.AlarmManager;
 import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
-import android.os.Build;
 
 import android.util.Log;
 
@@ -68,7 +69,7 @@ public class AlarmUtil {
         intent.setAction(ALARM_SERVICE_TRIGGER);
         intent.putExtra("isStartService", isStartService);
         PendingIntent pendingIntent = PendingIntent
-                .getBroadcast(mContext, alarm.id, intent, 0);
+                .getBroadcast(mContext, alarm.id, intent, FLAG_IMMUTABLE);
         Calendar alarmTime = Calendar.getInstance();
         alarmTime.set(Calendar.MONTH, alarm.month);
         alarmTime.set(Calendar.DATE, alarm.date);
@@ -91,7 +92,7 @@ public class AlarmUtil {
         Log.d("Alarms","Size"+mAlarmStorage.getAlarms().size());
         for (Alarm alarm : mAlarmStorage.getAlarms()) {
             Intent myIntent = new Intent(mContext, BootBroadcastReceiver.class);
-            PendingIntent pendingIntent = PendingIntent.getBroadcast(mContext, alarm.id, myIntent, 0);
+            PendingIntent pendingIntent = PendingIntent.getBroadcast(mContext, alarm.id, myIntent, FLAG_IMMUTABLE);
 
             if (pendingIntent != null && mAlarmManager != null) {
 

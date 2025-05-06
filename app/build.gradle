@@ -5,8 +5,8 @@ android {
     compileSdk 32
 
     defaultConfig {
-        applicationId "com.volvocars.climate"
-        minSdk 32
+        applicationId "com.child.parent.kidcare1"
+        minSdk 19
         targetSdk 32
         versionCode 1
         versionName "1.0"

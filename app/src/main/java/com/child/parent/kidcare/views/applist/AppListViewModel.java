@@ -49,6 +49,8 @@ public class AppListViewModel extends AndroidViewModel {
                     List<ApplicationInfo> packages = pm.getInstalledApplications(PackageManager.GET_META_DATA);
 
 
+
+
                     for (int index = 0; index < packages.size(); index++) {
                         ApplicationInfo packageInfo = packages.get(index);
                         Intent intent = pm.getLaunchIntentForPackage(packageInfo.packageName);

@@ -1,5 +1,6 @@
 package com.child.parent.kidcare.views.home;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -13,12 +14,14 @@ import com.child.parent.kidcare.settings.SettingsActivity;
 import com.child.parent.kidcare.utils.Util;
 import com.child.parent.kidcare.views.UserProfile.UserProfileActivity;
 import com.child.parent.kidcare.views.applist.SelectAppActivity;
+import com.child.parent.kidcare.views.otplockscreen.OtpRequestActivity;
 import com.child.parent.kidcare.views.settime.SetTimerActivity;
 
 import org.json.JSONException;
 import org.json.JSONObject;
 
 public class HomeActivity extends AppCompatActivity {
+
 
     TextView txtUserName,txtUserDetails;
     boolean reFetchProfileData;
@@ -33,12 +36,14 @@ public class HomeActivity extends AppCompatActivity {
         boolean isParentMobile = Util.isParentMobile(getApplicationContext());
         View viewSelectApp = findViewById(R.id.homescreen_linearSelectApp);
         viewSelectApp.setOnClickListener(v -> {
-                if(isParentMobile ) {
-                    startActivity(new Intent(this, SelectAppActivity.class));
-                    overridePendingTransition(R.animator.slide_up, R.animator.slide_down);
-                } else {
-
-                }
+            if(isParentMobile) {
+                launchSelectActivityScreen();
+            } else {
+                Intent intent = new Intent(getApplicationContext(), OtpRequestActivity.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                intent.putExtra("pkg", "com.child.parent.kidcare");
+                startActivity(intent);
+            }
 
 
         });
@@ -68,6 +73,11 @@ public class HomeActivity extends AppCompatActivity {
 
     }
 
+    private void launchSelectActivityScreen() {
+        startActivity(new Intent(this, SelectAppActivity.class));
+        overridePendingTransition(R.animator.slide_up, R.animator.slide_down);
+    }
+
     @Override
     protected void onResume() {
         super.onResume();
@@ -92,8 +102,5 @@ public class HomeActivity extends AppCompatActivity {
     }
 
 
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-    }
+
 }
